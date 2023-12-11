@@ -2,6 +2,7 @@ package com.airport.airportservice.controller;
 
 import com.airport.airportservice.entity.Flight;
 import com.airport.airportservice.repository.FlightRepository;
+import com.airport.airportservice.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,30 +13,30 @@ import java.util.Optional;
 @RequestMapping("/api/flights")
 public class FlightController {
 
-    private final FlightRepository flightRepository;
+    private final FlightService flightService;
 
     @Autowired
-    public FlightController(FlightRepository flightRepository) {
-        this.flightRepository = flightRepository;
+    public FlightController(FlightService flightService) {
+        this.flightService = flightService;
     }
 
     @GetMapping
     public List<Flight> getAllFlights() {
-        return flightRepository.findAll();
+        return flightService.getAllFlights();
     }
 
     @PostMapping
     public Flight addFlight(@RequestBody Flight flight) {
-        return flightRepository.save(flight);
+        return flightService.addFlight(flight);
     }
 
     @GetMapping("/{id}")
     public Optional<Flight> getFlight(@PathVariable Long id) {
-        return flightRepository.findById(id);
+        return flightService.getFlightById(id);
     }
 
     @DeleteMapping("/{id}")
     public void deleteFlightById(@PathVariable Long id) {
-        flightRepository.deleteById(id);
+        flightService.deleteFlightById(id);
     }
 }
