@@ -10,15 +10,16 @@ public class Staff extends Person{
     @Id
     private Long id;
     private String role;
+
     @ManyToOne
     @JoinColumn(name = "airlineId")
-    private Staff staff;
+    private AirlineCompany airlineCompany;
 
-    public Staff(String firstName, String lastName, int age, Long id, String role, Staff staff) {
+    public Staff(String firstName, String lastName, int age, Long id, String role, AirlineCompany airlineCompany) {
         super(firstName, lastName, age);
         this.id = id;
         this.role = role;
-        this.staff = staff;
+        this.airlineCompany = airlineCompany;
     }
     public Staff() {
 
@@ -39,12 +40,11 @@ public class Staff extends Person{
         this.role = role;
     }
 
-    public Staff getStaff() {
-        return staff;
+    public AirlineCompany getAirlineCompany() {
+        return airlineCompany;
     }
 
-    public void setStaff(Staff staff) {
-        this.staff = staff;
+    public void setAirlineCompany(AirlineCompany airlineCompany) {
+        this.airlineCompany = airlineCompany;
     }
-
 }
