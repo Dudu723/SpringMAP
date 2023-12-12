@@ -23,13 +23,7 @@ class AirportServiceApplicationTests {
 
 	@Test
 	void testAddAndGetFlight() {
-//		Flight newFlight = new Flight(null, "12:00:00", "15:00:00");
-//		Flight savedFlight = flightController.addFlight(newFlight);
-
-		Flight newFlight = new Flight();
-		newFlight.setDepartureTime("12:00:00");
-		newFlight.setArrivalTime("15:00:00");
-
+		Flight newFlight = new Flight(null, "12:00:00", "15:00:00");
 		Flight savedFlight = flightController.addFlight(newFlight);
 
 		Optional<Flight> retrievedFlight = flightController.getFlight(savedFlight.getId());
