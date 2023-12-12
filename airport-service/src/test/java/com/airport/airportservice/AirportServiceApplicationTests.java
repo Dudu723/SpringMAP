@@ -1,11 +1,10 @@
 package com.airport.airportservice;
 
-import com.airport.airportservice.controller.FlightController;
+import com.airport.airportservice.controller.RealFlightController;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.airport.airportservice.entity.Flight;
-import com.airport.airportservice.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -59,7 +58,7 @@ class AirportServiceApplicationTests {
 //	}
 
 	@Autowired
-	private FlightController flightController;
+	private RealFlightController flightController;
 
 	@Test
 	void testAddAndGetFlight() {
