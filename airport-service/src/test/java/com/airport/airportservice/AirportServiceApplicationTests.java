@@ -18,45 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @SpringBootTest(classes = AirportServiceApplication.class)
 class AirportServiceApplicationTests {
 
-//	@Autowired
-//	private FlightService flightService;
-//
-//	@Test
-//	void testAddAndGetFlight() {
-//		Flight newFlight = new Flight(null, "12:00:00", "15:00:00");
-//		Flight savedFlight = flightService.addFlight(newFlight);
-//
-//		Optional<Flight> retrievedFlight = flightService.getFlightById(savedFlight.getId());
-//
-//		assertTrue(retrievedFlight.isPresent());
-//		assertEquals(newFlight.getDepartureTime(), retrievedFlight.get().getDepartureTime());
-//		assertEquals(newFlight.getArrivalTime(), retrievedFlight.get().getArrivalTime());
-//	}
-//
-//	@Test
-//	void testGetAllFlights() {
-//		Flight flight1 = new Flight(null, "12:00:00", "15:00:00");
-//		Flight flight2 = new Flight(null, "14:00:00", "17:00:00");
-//		flightService.addFlight(flight1);
-//		flightService.addFlight(flight2);
-//
-//		List<Flight> allFlights = flightService.getAllFlights();
-//
-//		assertEquals(2, allFlights.size());
-//	}
-//
-//	@Test
-//	void testDeleteFlight() {
-//		Flight newFlight = new Flight(null, "12:00:00", "15:00:00");
-//		Flight savedFlight = flightService.addFlight(newFlight);
-//
-//		flightService.deleteFlightById(savedFlight.getId());
-//
-//		Optional<Flight> deletedFlight = flightService.getFlightById(savedFlight.getId());
-//
-//		assertTrue(deletedFlight.isEmpty());
-//	}
-
 	@Autowired
 	private RealFlightController flightController;
 
