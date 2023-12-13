@@ -17,7 +17,6 @@ public class FlightUI {
     private final FlightController realFlightController;
     private FlightController flightController;
 
-
     @Autowired
     public FlightUI(FlightController realFlightController) {
         this.realFlightController = realFlightController;
