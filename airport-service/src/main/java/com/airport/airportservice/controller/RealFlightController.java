@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/flights")
-public class RealFlightController implements FlightController{
+public class RealFlightController implements FlightController {
 
     private final FlightService flightService;
 
@@ -38,6 +38,4 @@ public class RealFlightController implements FlightController{
     public void deleteFlightById(@PathVariable Long id) {
         flightService.deleteFlightById(id);
     }
-
-
 }
