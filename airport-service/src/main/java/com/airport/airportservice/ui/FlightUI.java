@@ -22,7 +22,7 @@ public class FlightUI {
         this.realFlightController = realFlightController;
     }
 
-    public void start() {
+    public int start() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your username: ");
@@ -50,8 +50,8 @@ public class FlightUI {
                     deleteFlight();
                     break;
                 case 5:
-                    System.out.println("Exiting the program. Goodbye!");
-                    System.exit(0);
+                    System.out.println("Returning to the main menu.");
+                    return 0;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
