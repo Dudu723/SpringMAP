@@ -2,7 +2,6 @@ package com.airport.airportservice;
 
 import com.airport.airportservice.controller.AirlineCompanyController;
 import com.airport.airportservice.entity.AirlineCompany;
-import com.airport.airportservice.entity.Flight;
 import com.airport.airportservice.service.AirlineCompanyService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
