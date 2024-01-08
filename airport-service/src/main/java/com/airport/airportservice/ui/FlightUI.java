@@ -72,7 +72,6 @@ public class FlightUI {
         List<Flight> flights = flightController.getAllFlights();
         System.out.println("\nAll Flights:");
         for (Flight flight : flights) {
-            System.out.println(flight.getId());
             System.out.println(flight);
         }
     }
