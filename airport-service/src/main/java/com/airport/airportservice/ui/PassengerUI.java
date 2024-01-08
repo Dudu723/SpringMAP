@@ -62,7 +62,6 @@ public class PassengerUI {
         List<Passenger> passengers = passengerController.getAllPassengers();
         System.out.println("\nAll Passengers:");
         for (Passenger passenger : passengers) {
-            System.out.println(passenger.getId());
             System.out.println(passenger);
         }
     }

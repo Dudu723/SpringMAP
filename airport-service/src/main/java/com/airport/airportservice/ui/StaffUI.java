@@ -62,7 +62,6 @@ public class StaffUI {
         List<Staff> staffList = staffController.getAllStaff();
         System.out.println("\nAll Staff:");
         for (Staff staff : staffList) {
-            System.out.println(staff.getId());
             System.out.println(staff);
         }
     }

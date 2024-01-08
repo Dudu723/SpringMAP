@@ -62,7 +62,6 @@ public class AirlineCompanyUI {
         List<AirlineCompany> airlines = airlineCompanyController.getAllAirlines();
         System.out.println("\nAll Airlines:");
         for (AirlineCompany airline : airlines) {
-            System.out.println(airline.getId());
             System.out.println(airline);
         }
     }

@@ -62,7 +62,6 @@ public class SecurityCheckUI {
         List<SecurityCheck> securityChecks = securityCheckController.getAllSecurityChecks();
         System.out.println("\nAll Security Checks:");
         for (SecurityCheck securityCheck : securityChecks) {
-            System.out.println(securityCheck.getId());
             System.out.println(securityCheck);
         }
     }

@@ -62,7 +62,6 @@ public class PlaneUI {
         List<Plane> planes = planeController.getAllPlanes();
         System.out.println("\nAll Planes:");
         for (Plane plane : planes) {
-            System.out.println(plane.getId());
             System.out.println(plane);
         }
     }

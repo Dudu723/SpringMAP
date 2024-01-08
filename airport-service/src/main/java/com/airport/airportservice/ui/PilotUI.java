@@ -62,7 +62,6 @@ public class PilotUI {
         List<Pilot> pilots = pilotController.getAllPilots();
         System.out.println("\nAll Pilots:");
         for (Pilot pilot : pilots) {
-            System.out.println(pilot.getId());
             System.out.println(pilot);
         }
     }

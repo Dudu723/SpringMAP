@@ -63,7 +63,6 @@ public class BoardingGateUI {
         List<BoardingGate> boardingGates = boardingGateController.getAllBoardingGates();
         System.out.println("\nAll Boarding Gates:");
         for (BoardingGate boardingGate : boardingGates) {
-            System.out.println(boardingGate.getId());
             System.out.println(boardingGate);
         }
     }

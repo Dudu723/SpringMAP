@@ -63,7 +63,6 @@ public class FlightDelayLogUI {
         List<FlightDelayLog> flightDelays = flightDelayLogController.getAllFlightDelays();
         System.out.println("\nAll Flight Delays:");
         for (FlightDelayLog flightDelay : flightDelays) {
-            System.out.println(flightDelay.getId());
             System.out.println(flightDelay);
         }
     }

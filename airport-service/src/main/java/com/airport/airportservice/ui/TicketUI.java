@@ -62,7 +62,6 @@ public class TicketUI {
         List<Ticket> ticketList = ticketController.getAllTickets();
         System.out.println("\nAll Tickets:");
         for (Ticket ticket : ticketList) {
-            System.out.println(ticket.getId());
             System.out.println(ticket);
         }
     }
