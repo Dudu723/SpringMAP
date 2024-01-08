@@ -45,4 +45,13 @@ public class Staff extends Person{
     public void setAirlineCompany(AirlineCompany airlineCompany) {
         this.airlineCompany = airlineCompany;
     }
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "id=" + id +
+                ", role='" + role + '\'' +
+                ", airlineCompany=" + airlineCompany +
+                '}';
+    }
 }

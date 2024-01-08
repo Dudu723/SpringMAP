@@ -48,5 +48,12 @@ public class FlightDelayLog {
         this.duration = duration;
     }
 
-
+    @Override
+    public String toString() {
+        return "FlightDelayLog{" +
+                "id=" + id +
+                ", flight=" + flight +
+                ", duration='" + duration + '\'' +
+                '}';
+    }
 }

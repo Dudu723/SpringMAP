@@ -48,4 +48,12 @@ public class BoardingGate {
         this.flight = flight;
     }
 
+    @Override
+    public String toString() {
+        return "BoardingGate{" +
+                "id=" + id +
+                ", status='" + status + '\'' +
+                ", flight=" + flight +
+                '}';
+    }
 }

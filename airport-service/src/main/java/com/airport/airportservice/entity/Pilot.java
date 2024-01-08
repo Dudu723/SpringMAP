@@ -37,4 +37,12 @@ public class Pilot extends Person {
     public void setYearsOfActivity(int yearsOfActivity) {
         this.yearsOfActivity = yearsOfActivity;
     }
+
+    @Override
+    public String toString() {
+        return "Pilot{" +
+                "id=" + id +
+                ", yearsOfActivity=" + yearsOfActivity +
+                '}';
+    }
 }

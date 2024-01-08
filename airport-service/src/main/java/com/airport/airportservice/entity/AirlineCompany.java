@@ -46,4 +46,12 @@ public class AirlineCompany {
         this.fleetSize = fleetSize;
     }
 
+    @Override
+    public String toString() {
+        return "AirlineCompany{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", fleetSize=" + fleetSize +
+                '}';
+    }
 }

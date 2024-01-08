@@ -33,12 +33,13 @@ public class AirportServiceApplication {
 			System.out.println("3. Flight");
 			System.out.println("4. FlightDelayLog");
 			System.out.println("5. Passenger");
-			System.out.println("6. Person");
-			System.out.println("7. Pilot");
-			System.out.println("8. Plane");
-			System.out.println("9. SecurityCheck");
-			System.out.println("10. Staff");
+			System.out.println("6. Pilot");
+			System.out.println("7. Plane");
+			System.out.println("8. SecurityCheck");
+			System.out.println("9. Staff");
+			System.out.println("10. Ticket");
 			System.out.println("0. Exit");
+			System.out.print("Enter your choice: ");
 
 			int choice = scanner.nextInt();
 

@@ -45,4 +45,13 @@ public class SecurityCheck {
     public void setResult(String result) {
         this.result = result;
     }
+
+    @Override
+    public String toString() {
+        return "SecurityCheck{" +
+                "id=" + id +
+                ", passenger=" + passenger +
+                ", result='" + result + '\'' +
+                '}';
+    }
 }

@@ -55,4 +55,14 @@ public class Plane {
     public void setPilot(Pilot pilot) {
         this.pilot = pilot;
     }
+
+    @Override
+    public String toString() {
+        return "Plane{" +
+                "id=" + id +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", pilot=" + pilot +
+                '}';
+    }
 }
