@@ -90,39 +90,34 @@ public class FlightTest {
         verify(flightService, times(1)).deleteFlightById(flightId);
     }
 
-//
-//    @Test
-//    public void deleteFlightById_AdminAndNotAdmin_PermissionHandling() throws Exception {
-//        Long flightId = 1L;
-//
-//        // Test with non-admin user
-//        FlightControllerProxy nonAdminFlightController = new FlightControllerProxy(flightController, "user");
-//
-//        mockMvc.perform(MockMvcRequestBuilders.delete("/api/flights/{id}", flightId)
-//                        .with(request -> {
-//                            System.out.println("Request Attributes: " + request.getAttributeNames());
-//                            request.setAttribute("flightController", nonAdminFlightController);
-//                            return request;
-//                        }))
-//                .andExpect(MockMvcResultMatchers.status().isOk())
-//                .andExpect(MockMvcResultMatchers.content().string("Permission denied. Only admin can delete flights."));
-//
-//        verify(flightService, never()).deleteFlightById(flightId);
-//
-//        // Test with admin user
-//        FlightControllerProxy adminFlightController = new FlightControllerProxy(flightController, "admin");
-//
-//        mockMvc.perform(MockMvcRequestBuilders.delete("/api/flights/{id}", flightId)
-//                        .with(request -> {
-//                            System.out.println("Request Attributes: " + request.getAttributeNames());
-//                            request.setAttribute("flightController", adminFlightController);
-//                            return request;
-//                        }))
-//                .andExpect(MockMvcResultMatchers.status().isOk())
-//                .andExpect(MockMvcResultMatchers.content().string("Flight deleted successfully!"));
-//
-//        verify(flightService, times(1)).deleteFlightById(flightId);
-//    }
+    @Test
+    public void deleteFlightById_SuccessForAdmin() throws Exception {
+        Long flightId = 1L;
+        String username = "admin";
 
+        mockMvc.perform(MockMvcRequestBuilders.delete("/api/flights/{id}", flightId)
+                        .with(request -> {
+                            request.setRemoteUser(username);
+                            return request;
+                        }))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+
+        verify(flightService, times(1)).deleteFlightById(flightId);
+    }
+
+    @Test
+    public void deleteFlightById_FailureForNonAdmin() throws Exception {
+        Long flightId = 1L;
+        String username = "user";
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/api/flights/{id}", flightId)
+                        .with(request -> {
+                            request.setRemoteUser(username);
+                            return request;
+                        }))
+                .andExpect(MockMvcResultMatchers.status().isForbidden());
+
+        verify(flightService, never()).deleteFlightById(flightId);
+    }
 
 }
